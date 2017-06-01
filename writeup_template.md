@@ -6,7 +6,7 @@
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Describe your pipeline. 
 
 My pipeline consisted of 5 steps.
 1. Adding Gaussian noise for blur effect, Convert Color to grayscale Image 
@@ -14,9 +14,15 @@ My pipeline consisted of 5 steps.
 3. Selecting some Region of Interest (ROI)
 3. Hough transform to find lines from the detected pixels from edge detection
 4. Extrapolation of lines using and finding two lines left and right line from the lines found using hough transform
-
+### how you modified the draw_lines() function
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by
-1. 
+As we get so many lines from hough transform left line of lane is always tilted to the right and the right line of lane is tilted to left
+1. We categorize the left and right lines based on slope
+2. Take average slope of all the lines
+3. If the slope line is too much far from the average slope delete that line.
+4. Once we have left lines and right lines, we use max min method to extra-polate the line. For example: for left line Y2 should be min of all y2 in left line for extrapolation
+
+Note: If there is too much noise (SNR ratio) then this won't work well
 
 Flow of the pipeline with the outputs:
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
