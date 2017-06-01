@@ -26,15 +26,16 @@ Note: If there is too much noise (SNR ratio) then this won't work well
 
 Flow of the pipeline with the outputs:
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
-1. Gray output:
-2. Edge detection (Canny):
-3. Region of Interest:
-4. Hough transformlines output:
+#### 1. Gray output:
+<img src="test_images_output/gray/solidWhiteCurve.jpg" width="480" alt="Combined Image" />
+#### 2. Edge detection (Canny):
+<img src="test_images_output/canny/solidWhiteCurve.jpg" width="480" alt="Combined Image" />
+#### 3. Region of Interest:
+<img src="test_images_output/ROI/solidWhiteCurve.jpg" width="480" alt="Combined Image" />
+#### 4. Hough transformlines output:
+<img src="test_images_output/hough/solidWhiteCurve.jpg" width="480" alt="Combined Image" />
 #### 5. Extrapolation of Lines ouput:
 <img src="test_images_output/solidWhiteCurve.jpg" width="480" alt="Combined Image" />
-
-![alt text][./test_images_output/solidWhiteCurve.jpg]
-
 
 ### 2. Identify potential shortcomings with your current pipeline
 
