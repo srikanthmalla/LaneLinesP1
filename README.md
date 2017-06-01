@@ -11,7 +11,8 @@ Output Image:
 
 Flow of the Pipeline:
 ---------------------
-1. Convert Color to Black & White Image
+1. Adding Gaussian noise for blur effect, Convert Color to grayscale Image 
 2. Canny edge detector to detect edges
-3. Hough transform to find lines
+3. Selecting some Region of Interest (ROI)
+3. Hough transform to find lines from the detected pixels from edge detection
 4. Extrapolation of lines using and finding two lines left and right line from the lines found using hough transform
